@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#f2f0e9" />
+    <title>Arka - Kalkulator</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="calculator-shell">
+      <header class="app-header">
+        <div>
+          <p class="eyebrow">ALAT HITUNG</p>
+          <h1>Arka<span>.</span></h1>
+        </div>
+        <button class="icon-button" id="historyButton" type="button" aria-label="Buka riwayat" title="Riwayat">
+          <span aria-hidden="true">↶</span>
+        </button>
+      </header>
+
+      <section class="display" aria-live="polite">
+        <div class="expression" id="expression">0</div>
+        <output class="result" id="result">0</output>
+      </section>
+
+      <section class="keypad" aria-label="Kalkulator">
+        <button class="key key-function" data-action="clear" type="button">AC</button>
+        <button class="key key-function" data-action="delete" type="button" aria-label="Hapus">⌫</button>
+        <button class="key key-function" data-value="%" type="button">%</button>
+        <button class="key key-operation" data-value="÷" type="button">÷</button>
+
+        <button class="key" data-value="7" type="button">7</button>
+        <button class="key" data-value="8" type="button">8</button>
+        <button class="key" data-value="9" type="button">9</button>
+        <button class="key key-operation" data-value="×" type="button">×</button>
+
+        <button class="key" data-value="4" type="button">4</button>
+        <button class="key" data-value="5" type="button">5</button>
+        <button class="key" data-value="6" type="button">6</button>
+        <button class="key key-operation" data-value="−" type="button">−</button>
+
+        <button class="key" data-value="1" type="button">1</button>
+        <button class="key" data-value="2" type="button">2</button>
+        <button class="key" data-value="3" type="button">3</button>
+        <button class="key key-operation" data-value="+" type="button">+</button>
+
+        <button class="key key-wide" data-value="0" type="button">0</button>
+        <button class="key" data-value="." type="button">.</button>
+        <button class="key key-equals" data-action="equals" type="button">=</button>
+      </section>
+
+      <aside class="history-panel" id="historyPanel" aria-hidden="true">
+        <div class="history-heading">
+          <h2>Riwayat</h2>
+          <button class="text-button" id="clearHistory" type="button">Hapus semua</button>
+        </div>
+        <div class="history-list" id="historyList">
+          <p class="history-empty">Belum ada hitungan.</p>
+        </div>
+        <button class="close-history" id="closeHistory" type="button" aria-label="Tutup riwayat">×</button>
+      </aside>
+    </main>
+
+    <script type="module" src="app.js"></script>
+  </body>
+</html>

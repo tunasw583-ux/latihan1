@@ -56,6 +56,29 @@ button { font: inherit; }
 h1 { margin: 0; font-size: 27px; line-height: 1; }
 h1 span { color: #f06b3a; }
 
+.mode-tabs {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 4px;
+  margin: 8px 28px 0;
+  padding: 4px;
+  border: 1px solid #dfddd5;
+  border-radius: 6px;
+  background: #f5f3ed;
+}
+
+.mode-tab {
+  min-height: 36px;
+  border: 0;
+  border-radius: 4px;
+  background: transparent;
+  color: #747970;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+.mode-tab.active { background: #17221d; color: #fff; }
+
 .icon-button {
   width: 42px;
   height: 42px;
@@ -146,6 +169,54 @@ h1 span { color: #f06b3a; }
   transition: transform 260ms cubic-bezier(.2,.8,.2,1);
 }
 
+.geometry-panel {
+  min-height: 420px;
+  margin: 18px 28px 28px;
+  padding: 20px;
+  border-top: 1px solid #eeece5;
+  display: grid;
+  grid-template-rows: 1fr auto;
+  gap: 24px;
+}
+
+.geometry-panel[hidden], [hidden] { display: none; }
+.geometry-fields { display: grid; align-content: start; gap: 12px; }
+.shape-select-label, .geometry-field { display: grid; gap: 7px; }
+.shape-select-label > span, .geometry-field > span { color: #70766e; font-size: 12px; }
+.geometry-field small { color: #9a9d96; }
+
+.shape-select-label select, .geometry-field input {
+  width: 100%;
+  min-height: 48px;
+  border: 1px solid #dcdad2;
+  border-radius: 5px;
+  background: #f7f5ef;
+  color: #17221d;
+  font: 16px 'DM Mono', monospace;
+  padding: 10px 12px;
+}
+
+.geometry-answer {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: end;
+  gap: 10px;
+  border-top: 1px solid #eeece5;
+  padding-top: 18px;
+}
+
+.geometry-answer > span { grid-column: 1 / -1; color: #777c75; font-size: 12px; }
+.geometry-answer output { min-width: 0; overflow-wrap: anywhere; font: 500 30px 'DM Mono', monospace; }
+.geometry-submit {
+  min-height: 46px;
+  border: 0;
+  border-radius: 5px;
+  background: #f06b3a;
+  color: #fff;
+  padding: 0 18px;
+  cursor: pointer;
+}
+
 .history-panel.open { transform: translateX(0); }
 .history-heading { display: flex; align-items: center; justify-content: space-between; }
 .history-heading h2 { margin: 0; font-size: 22px; }
@@ -183,6 +254,10 @@ h1 span { color: #f06b3a; }
   .calculator-shell { min-height: calc(100vh - 24px); }
   .app-header { padding-top: 18px; }
   .display { min-height: 130px; padding-top: 18px; }
+  .mode-tabs { margin-inline: 28px; }
+  .geometry-panel { min-height: 300px; margin-block: 12px 18px; }
+  .geometry-fields { gap: 8px; }
+  .shape-select-label select, .geometry-field input { min-height: 42px; }
   .keypad { gap: 8px; padding: 12px 28px 18px; }
   .key { height: 58px; }
 }
@@ -191,6 +266,8 @@ h1 span { color: #f06b3a; }
   body { padding: 0; background: #fffefa; }
   .calculator-shell { min-height: 100vh; width: 100%; border: 0; border-radius: 0; box-shadow: none; }
   .app-header { padding-inline: 20px; }
+  .mode-tabs { margin-inline: 20px; }
+  .geometry-panel { margin-inline: 20px; }
   .display { padding-inline: 20px; }
   .keypad { padding-inline: 20px; }
 }

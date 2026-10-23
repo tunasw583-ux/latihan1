@@ -1,6 +1,6 @@
 # Arka Kalkulator
 
-Kalkulator web responsif dengan operasi dasar, prioritas matematika, riwayat lokal, dan dukungan keyboard.
+Kalkulator web responsif dengan operasi dasar, prioritas matematika, penghitungan luas dan volume, riwayat lokal, serta dukungan keyboard.
 
 ## Jalankan
 
@@ -19,3 +19,5 @@ Lalu buka `http://localhost:4173`.
 - `Escape` atau `AC` membersihkan kalkulator.
 - `Backspace` menghapus satu karakter.
 - Tombol riwayat menampilkan maksimal 20 hitungan terakhir.
+- Pilih tab **Luas** untuk persegi panjang, segitiga, atau lingkaran.
+- Pilih tab **Volume** untuk balok, tabung, atau bola.
